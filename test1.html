@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>无标题文档</title> 
+<script language="javascript" src="js/jquery.min.js"></script> 
+<script language="javascript"> 
+$(function(){ 
+var offsetX=20-$("#imgtest").offset().left; 
+var offsetY=20-$("#imgtest").offset().top; 
+var size=1.2*$('#imgtest ul li img').width(); 
+$("#imgtest ul li").mouseover(function(event) { 
+var $target=$(event.target); 
+if($target.is('img')) 
+{ 
+$("<img id='tip' src='"+$target.attr("src")+"'>").css({ 
+"height":size, 
+"width":size, 
+"top":event.pageX+offsetX, 
+"left":event.pageY+offsetY, 
+}).appendTo($("#imgtest")); 
+} 
+}).mouseout(function() { 
+$("#tip").remove(); 
+}).mousemove(function(event) { 
+$("#tip").css( 
+{ 
+"left":event.pageX+offsetX, 
+"top":event.pageY+offsetY 
+}); 
+}); 
+}) 
+</script> 
+<style type="text/css"> 
+img{ height:262px; width:400px; position:absolute; border:5px solid #FFF;} 
+#imgtest{ height:auto;width:840px; margin:0 auto; position:absolute; } 
+#imgtest ul{ position:relative;width:840px; height:auto; background:#00F;} 
+#imgtest ul li{ position:relative; height:276px; width:410px; list-style:none; float:left; margin:3px; border:1px solid #999;} 
+</style> 
+</head> 
+<body> 
+<div id="imgtest"> 
+<ul> 
+<li><img src="img/silde1.jpg" /></li> 
+<li><img src="img/slide2.jpg" /></li> 
+<li><img src="img/slide3.jpg" /></li>
+</ul> 
+</div> 
+</body> 
+</html> 

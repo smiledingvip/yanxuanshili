@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日式和风声波式电动牙刷</title>
+	<link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="uEditor/uEditor.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default top">
+	<div class="container">
+		<div class="navbar-header">
+			<span class="header-logo">好的生活，没那么贵</span>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#" id="login_a">登录</a></li>
+			<li><a href="#" id="member">用户</a></li>
+			<li><a href="#" class="margin-right" id="reg_a">注册</a></li>
+			<li><a href="#" class="margin-right" id="logout">退出</a></li>
+			<li><a href="#" class="border-left">严选态度</a></li>
+			<li><a href="#" class="border-left">企业采购</a></li>
+			<li class="dropdown">
+				<a href="#" class="border-left dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+				客户服务 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">在线客服</a></li>
+					<li><a href="#">电话客服</a></li>
+					<li><a href="#" class="list-bottom">商务合作</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="border-left">下载APP</a></li>
+		</ul>
+	</div>
+</nav>	
+
+<!-- <form id="login" title="账号登录">
+	<ol class="login_error"></ol>
+	<div class="input-prepend">
+		<span class="add-on"><img src="https://mimg.127.net/hz/uploader/20160309/14575123040210580.png" style="width:21px;height:21px;" alt=""></span>
+		<input class="span2" id="prependedInput" type="text" placeholder="Username">
+	</div>
+	<div class="input-prepend">
+		<span class="add-on"><img src="https://mimg.127.net/hz/uploader/20160309/14575123040210580.png" style="width:21px;height:21px;" alt=""></span>
+		<input class="span2" id="prependedInput" type="password">
+	</div>
+	
+</form> -->
+
+
+<form id="login" title="账号登录" style="display:none">
+	<ol class="login_error"></ol>
+	<div class="input-group">
+		<span class="input-group-addon"><img src="http://yanxuan.nosdn.127.net/d6bd29fcf2096cb4c5d338e0fce13919.png" alt=""></span>
+		<input type="text" class="form-control" name="login_user" id="login_user">
+	</div>
+	<div class="input-group">
+		<span class="input-group-addon"><img src="http://yanxuan.nosdn.127.net/178e29b95f152a8aa6490f4f7032a8e8.png" alt=""></span>
+		<input type="password" class="form-control" name="login_pass" id="login_pass">
+	</div>
+	<p>
+		<input type="checkbox" name="expires" id="expires" checked="checked"/><label for="expires">记住密码</label>
+	</p>
+	<!-- <p>
+		<button>登录</button>
+	</p> -->
+</form>
+
+<form id="reg"  title="会员注册" style="display:none">
+	<ol class="reg_error"></ol>
+	<p>
+		<label for="user">帐号：</label>
+		<input type="text" name="user" class="text" id="reg_user" />
+	</p>
+	<p>
+		<label for="pass">密码：</label>
+		<input type="password" name="pass" class="text" id="reg_pass" />
+	</p>
+	<p>
+		<label for="notpass">确认密码：</label>
+		<input type="password" name="notpass" class="text" id="reg_notpass" />
+	</p>
+	<p>
+		<label for="email">邮箱：</label>
+		<input type="text" name="email" class="text" id="email" />
+	</p>
+	<p>
+		<label for="phone">手机号：</label>
+		<input type="number" name="phone" class="text" id="phone" />
+	</p>
+	
+</form>
+
+<div id="header">
+	<div class="container">
+		<a href="index.html" class="material-logo1" title="网易严选"></a>
+		<input type="text" class="search" placeholder="买日式电动牙刷送夏季果冻鞋">
+		<a href="#" class="material-search"></a>
+		<a href="#" class="material-shopping"></a>
+		<ul class="nav nav-tabs">
+			<li><a href="index.html" class="a">首页</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span>居家</span></a>
+				<ul class="dropdown-menu menu1" >
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/13ff4decdf38fe1a5bde34f0e0cc635a.png" alt="夏凉">
+							<p class="text">夏凉</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/927bc33f7ae2895dd6c11cf91f5e3228.png" alt="被枕">
+							<p class="text">被枕</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/243e5bf327a87217ad1f54592f0176ec.png" alt="床品套件">
+							<p class="text">床品套件</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/8bbcd7de60a678846664af998f57e71c.png" alt="布艺软装">
+							<p class="text">布艺软装</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/4f00675caefd0d4177892ad18bfc2df6.png" alt="家具">
+							<p class="text">家具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/c48e0d9dcfac01499a437774a915842b.png" alt="灯具">
+							<p class="text">灯具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/ab0df9445d985bf6719ac415313a8e88.png" alt="家饰">
+							<p class="text">家饰</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/a0352c57c60ce4f68370ecdab6a30857.png" alt="宠物">
+							<p class="text">宠物</p>
+					</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">餐厨</a>
+				<ul class="dropdown-menu menu2" >
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/4aab4598017b5749e3b63309d25e9f6b.png" alt="锅具">
+							<p class="text">锅具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/0b244d3575b737c8f0ed7e84c5c4abd2.png" alt="杯壶">
+							<p class="text">杯壶</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/22db4ccbf52dc62c723ac83aa587812a.png" alt="功能厨具">
+							<p class="text">功能厨具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/f109afbb7e7a00c243c1da29991a5aa3.png" alt="餐具">
+							<p class="text">餐具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/9ea192cd2719c8348f42ec17842ba763.png" alt="茶具咖啡具">
+							<p class="text">茶具咖啡具</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/dc4d6c35b9f4abb42d2eeaf345710589.png" alt="清洁保鲜">
+							<p class="text">清洁保鲜</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/9d481ea4c2e9e6eda35aa720d407332e.png" alt="刀剪砧板">
+							<p class="text">刀剪砧板</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/521bd0c02d283b80ba49e73ca84df250.png" alt="厨房小电">
+							<p class="text">厨房小电</p>
+					</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">配件</a>
+				<ul class="dropdown-menu menu3" >
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/288b0e864a24763bade8e22c0c39ff02.png" alt="行李箱">
+							<p class="text">行李箱</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/e8e77f0c1eb2572c900d17870d48038a.png" alt="功能箱包">
+							<p class="text">功能箱包</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/5197c44b610d786796f955334b55c7a5.png" alt="双肩包">
+							<p class="text">双肩包</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/2f71c7710f0bf857e787e1adb449c8a2.png" alt="单肩包">
+							<p class="text">单肩包</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/4316c2d05745bc90d1f333e363e571bd.png" alt="男鞋">
+							<p class="text">男鞋</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/340e0f58cc53085c9198abb044dd615f.png" alt="女鞋">
+							<p class="text">女鞋</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/1121696544ed9b0c2a70e82f1088fa0e.png" alt="拖鞋">
+							<p class="text">拖鞋</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/3a8c7ae5b9dc5c1c4b7f2b656abb0279.png" alt="围巾件套">
+							<p class="text">围巾件套</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/d835a76e56a88905194f543b67089b4b.png" alt="配饰">
+							<p class="text">配饰</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/3ec003761d346bc866de2ec249d7ff19.png" alt="数码">
+							<p class="text">围巾件套</p>
+					</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">服装</a>
+				<ul class="dropdown-menu menu4" >
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/97bb55280b8ffa40390f2ee36486314a.png" alt="卫衣">
+							<p class="text">卫衣</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/94aa4a4814e2a7a97639438f1d52dcee.png" alt="衬衫">
+							<p class="text">衬衫</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/24a7a33cfeac0bb87a737480db79e053.png" alt="T恤">
+							<p class="text">T恤</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/2f71c7710f0bf857e787e1adb449c8a2.png" alt="单肩包">
+							<p class="text">单肩包</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/a3906045b1367d70f658ce9de03e8193.png" alt="裤装">
+							<p class="text">裤装</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/364269344ed69adafe1b70ab7998fc50.png" alt="内裤">
+							<p class="text">内裤</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/20279e1753e4eedc6e347857acda9681.png" alt="内衣">
+							<p class="text">内衣</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/71f391af17fce739a6a57a1eeadbcbf0.png" alt="家居服">
+							<p class="text">家居服</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/f123c74f54d9acff0bd1546c60034814.png" alt="袜子">
+							<p class="text">袜子</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/d82d0bacfd7243c2ad09dbf2513cfcf9.png" alt="丝袜">
+							<p class="text">丝袜</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/cc886f16c8b9893305f1b3b6ad4eb0b1.png" alt="毛衣">
+							<p class="text">毛衣</p>
+					</a></li>
+					<li><a href="#">
+							<img src="http://yanxuan.nosdn.127.net/0a7d57f75fc8180ed347b46b864d2195.png" alt="婴童服饰">
+							<p class="text">婴童服饰</p>
+					</a></li>
+				</ul>
+			</li>
+			<li><a href="#">洗护</a></li>
+			<li><a href="#">婴童</a></li>
+			<li><a href="#">杂货</a></li>
+			<li><a href="#">饮食</a></li>
+			<li><a href="#">志趣</a></li>
+			<li><a href="#">专题</a></li>
+			<li><a href="#">甄选家</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="detail">
+	<div class="container">
+		<div class="crumbs">
+			<a href="index.html">首页</a>
+			<span>></span>
+			<a href="">洗护</a>
+			<span>></span>
+			<a href="">口腔护理</a>
+			<span>></span>
+			<span>日式和风声波式电动牙刷</span>
+		</div>
+		<div class="m-detail">
+			<div class="detail-top over-flow">
+				<div class="slide">
+					<div class="view">
+						<img src="http://yanxuan.nosdn.127.net/e5474a8f4fd5748079e2ba2ead806b51.png?imageView&quality=90&thumbnail=430x430" alt="">
+						<img src="http://yanxuan.nosdn.127.net/0e523f738da051506343dc6fd5d53c05.jpg?imageView&quality=90&thumbnail=430x430" alt="">
+						<img src="http://yanxuan.nosdn.127.net/e38c6197e1e800731352c0db0a0f0e71.jpg?imageView&quality=90&thumbnail=430x430" alt="">
+						<img src="http://yanxuan.nosdn.127.net/fb9a0caca2a3dfa48600409bd599589d.jpg?imageView&quality=90&thumbnail=430x430" alt="">
+						<img src="http://yanxuan.nosdn.127.net/8be4f46ad001e69590a739a3d4e00fbf.jpg?imageView&quality=90&thumbnail=430x430" alt="">
+						<img src="http://yanxuan.nosdn.127.net/fb6623223dcd0c92843b13d857c2118f.png?imageView&thumbnail=430x430&quality=95" alt="">
+						<img src="http://yanxuan.nosdn.127.net/9e3ef5c57fdffd8500aeb9f7c1c73710.png?imageView&thumbnail=430x430&quality=95" alt="">
+						<img src="http://yanxuan.nosdn.127.net/638166c7e6bf08ead2d54d48034c8d7c.png?imageView&thumbnail=430x430&quality=95" alt="">
+						<img src="http://yanxuan.nosdn.127.net/0d39d3822704b508413d575acd81386b.png?imageView&thumbnail=430x430&quality=95" alt="">
+					</div>
+					<ul class="preview over-flow">
+						<li>
+							<img src="http://yanxuan.nosdn.127.net/e5474a8f4fd5748079e2ba2ead806b51.png?imageView&thumbnail=78x78&quality=95" alt="">
+						</li>
+						<li>
+							<img src="http://yanxuan.nosdn.127.net/0e523f738da051506343dc6fd5d53c05.jpg?imageView&thumbnail=78x78&quality=95" alt="">
+						</li>
+						<li>
+							<img src="http://yanxuan.nosdn.127.net/e38c6197e1e800731352c0db0a0f0e71.jpg?imageView&thumbnail=78x78&quality=95" alt="">
+						</li>
+						<li>
+							<img src="http://yanxuan.nosdn.127.net/fb9a0caca2a3dfa48600409bd599589d.jpg?imageView&thumbnail=78x78&quality=95" alt="">
+						</li>
+						<li class="last">
+							<img src="http://yanxuan.nosdn.127.net/8be4f46ad001e69590a739a3d4e00fbf.jpg?imageView&thumbnail=78x78&quality=95" alt="">
+						</li>
+						
+					</ul>
+				</div>
+				<form class="info" onsubmit="return false;">
+					<h3>日式和风声波式电动牙刷</h3>
+					<h4>进口刷毛，专利技术</h4>
+					<div class="price-tag">
+						<div>
+							<label for="" class="label_1">价格</label><span class="rmb">￥</span><span class="price price_1">189</span>
+						</div>
+						<div>
+							<label for="" class="label_2">促销价</label><span class="rmb">￥</span><span class="price price_2">129</span>
+						</div>
+						<div>
+							<label for="" class="label_3">服务</label><span>30天无忧退货 48小时快速退款 满88元免邮费 网易自营品牌</span>
+						</div>
+					</div>
+					<div class="color over-flow">
+						<span>颜色</span>
+						<ul class="over-flow">
+							<li title="象牙白机身+一个刷头"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="象牙白机身+一个刷头"><img src="http://yanxuan.nosdn.127.net/fb6623223dcd0c92843b13d857c2118f.png?imageView&thumbnail=50x50&quality=95" alt=""></a></li>
+							<li title="静雅黑机身+一个刷头"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="静雅黑机身+一个刷头"><img src="http://yanxuan.nosdn.127.net/9e3ef5c57fdffd8500aeb9f7c1c73710.png?imageView&thumbnail=50x50&quality=95" alt=""></a></li>
+							<li title="白色刷头2支装"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="白色刷头2支装"><img src="http://yanxuan.nosdn.127.net/638166c7e6bf08ead2d54d48034c8d7c.png?imageView&thumbnail=50x50&quality=95" alt=""></a></li>
+							<li title="黑色刷头2支装"><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="黑色刷头2支装"><img src="http://yanxuan.nosdn.127.net/0d39d3822704b508413d575acd81386b.png?imageView&thumbnail=50x50&quality=95" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="amount over-flow">
+						<span>数量</span>
+						<div>
+							<span class="minus">-</span>
+							<span class="middle"><input type="text" name="amount" value="1"></span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+					<div class="pay">
+						<button class="btn btn-default pay-now" type="submit">立即购买</button>
+						<button class="btn btn-default pay-then" type="submit">加入购物车</button>
+					</div>
+				</form>
+				
+			</div>
+			<div class="detail-body">
+				<div class="detail-body-left">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a href="#detail" data-toggle="tab">详情</a></li>
+						<li><a href="#comment" data-toggle="tab">评价</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane in active" id="detail">
+							<p>规格33*24*14cm</p>				
+							<!-- 详细页的内容 -->
+						</div>
+						<div class="tab-pane" id="comment">
+							<p>很好很强大</p>
+							<!-- 评价页内容 -->
+						</div>
+					</div>
+				</div>
+				<div class="detail-body-right">
+					<div class="head">猜你喜欢</div>
+					<div class="element">
+						<div class="hd">
+							<a href="">
+								<img src="http://yanxuan.nosdn.127.net/6ad1813d123f7a80f84c2cfa5f8c7caf.png?imageView&quality=95&thumbnail=180y170&axis=10" alt="AB面独立弹簧床垫 进口乳胶">
+							</a>
+						</div>
+						<div class="bd">
+							<!-- <div class="tag"></div> -->
+							<h4 class="name">
+								<a href="" class="name">
+									<span>AB面独立弹簧床垫 进口乳胶</span>
+								</a>
+							</h4>
+							<p class="price"><span>￥2599</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+
+<div id="foot">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<p class="hd">客服电话</p>
+				<p class="phone">400-0368-163</p>
+				<p class="time">9:00-22:00</p>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<p class="hd">何为严选</p>
+				<p class="description">网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品</p>
+				<p class="focus">关注我们:</p>
+				<img src="img/20170612001009.png" alt="">
+				<img src="img/20170612001036.png" alt="">
+				<img src="img/20170612001043.png" alt="">
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<p class="hd">扫码下载严选APP</p>
+				<p class="description"><img src="img/二维码.png" alt=""></p>
+				<p>下载领1000元新人礼包</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <script src="js/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ui.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="uEditor/uEditor.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/bootstrap-hover-dropdown.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+     $(function(){
+					var tLen = 0, 
+							vNum = 4, 
+							mNum = 1, 
+							mTime = 500, 
+							iShow = $(".show .itemshow ul"),
+							iItems = $(".show .itemshow ul li"),
+							mLen = iItems.eq(0).width() * mNum, 
+							cLen = (iItems.length - vNum) * iItems.eq(0).width(); 
+
+					iShow.css({width:iItems.length*iItems.eq(0).width()+'px'});
+					//下一张
+					$(".show .next").on({
+						click:function(){
+								if(tLen < cLen){
+									if((cLen - tLen) > mLen){
+										iShow.animate({left:"-=" + mLen + "px"}, mTime);
+										tLen += mLen;
+									}else{
+										iShow.animate({left:"-=" + (cLen - tLen) + "px"}, mTime);
+										tLen += (cLen - tLen);
+									}
+								}
+						}
+					});
+					//上一张
+					$(".show .prev").on({
+						click:function () {
+							if(tLen > 0){
+								if(tLen > mLen){
+									iShow.animate({left: "+=" + mLen + "px"}, mTime);
+									tLen -= mLen;
+								}else{
+									iShow.animate({left: "+=" + tLen + "px"}, mTime);
+									tLen = 0;
+								}
+							}
+						}
+					})
+				});
+</script>
+</body>
+</html>
